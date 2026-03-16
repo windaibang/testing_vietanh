@@ -31,6 +31,8 @@ public class Buoi3 {
         //cú pháp: for (kiểu dữ liệu tenBien : tenMang){ logic sử dụng tenBien}
         for (String ten : mangTen) {
             System.out.println("Tên học sinh: " + ten);
+
+            //đây là dòng code mới để test git
         }
     }
 }
