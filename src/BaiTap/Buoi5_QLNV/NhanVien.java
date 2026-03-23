@@ -10,13 +10,10 @@ public class NhanVien {
     private double salaryPerHour;
     private double totalWorkingHours;
 
-    // Constructor rỗng
-    public NhanVien() {
-    }
+    public NhanVien(){}
 
-    // Constructor đầy đủ
     public NhanVien(String id, String name, int age, String address,
-                    double salaryPerHour, double totalWorkingHours) {
+                    double salaryPerHour, double totalWorkingHours){
         this.id = id;
         this.name = name;
         this.age = age;
@@ -25,32 +22,30 @@ public class NhanVien {
         this.totalWorkingHours = totalWorkingHours;
     }
 
-    // Nhập
-    public void input(Scanner scan) {
+    public void input(Scanner scan){
         System.out.print("Nhập id: ");
-        this.id = scan.nextLine();
+        id = scan.nextLine();
 
         System.out.print("Nhập name: ");
-        this.name = scan.nextLine();
+        name = scan.nextLine();
 
         System.out.print("Nhập tuổi: ");
-        this.age = scan.nextInt();
+        age = scan.nextInt();
         scan.nextLine();
 
         System.out.print("Nhập địa chỉ: ");
-        this.address = scan.nextLine();
+        address = scan.nextLine();
 
-        System.out.print("Nhập lương theo giờ: ");
-        this.salaryPerHour = scan.nextDouble();
+        System.out.print("Nhập lương/giờ: ");
+        salaryPerHour = scan.nextDouble();
         scan.nextLine();
 
         System.out.print("Nhập tổng giờ làm: ");
-        this.totalWorkingHours = scan.nextDouble();
+        totalWorkingHours = scan.nextDouble();
         scan.nextLine();
     }
 
-    // Hiển thị
-    public void display() {
+    public void display(){
         System.out.println("ID: " + id +
                 " | Name: " + name +
                 " | Age: " + age +
@@ -59,20 +54,32 @@ public class NhanVien {
                 " | Total Hours: " + totalWorkingHours);
     }
 
-    // Getter cần dùng
-    public String getId() {
-        return id;
+    public String getId(){ return id; }
+    public String getName(){ return name; }
+    public double getTotalWorkingHours(){ return totalWorkingHours; }
+    public double getSalary(){ return salaryPerHour * totalWorkingHours; }
+
+    public void setTotalWorkingHours(double hours){
+        this.totalWorkingHours = hours;
     }
 
-    public double getSalary() {
-        return salaryPerHour * totalWorkingHours;
-    }
+    public void update(Scanner scan){
+        System.out.print("Nhập name mới: ");
+        name = scan.nextLine();
 
-    public double getTotalWorkingHours() {
-        return totalWorkingHours;
-    }
+        System.out.print("Nhập tuổi mới: ");
+        age = scan.nextInt();
+        scan.nextLine();
 
-    public String getName() {
-        return name;
+        System.out.print("Nhập địa chỉ mới: ");
+        address = scan.nextLine();
+
+        System.out.print("Nhập lương/giờ mới: ");
+        salaryPerHour = scan.nextDouble();
+        scan.nextLine();
+
+        System.out.print("Nhập tổng giờ làm mới: ");
+        totalWorkingHours = scan.nextDouble();
+        scan.nextLine();
     }
 }
