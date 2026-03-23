@@ -8,6 +8,17 @@ public class Baitap_buoi4 {
         //class là bản thiết kế ngôi nhà, object là ngôi nhà được xây dựng từ bản thiết kế đó
 
         //ví dụ: sinh viên: tên, tuổi, điểm toán, điểm lý, điểm hóa, điểm trung bình, xếp loại
+        // tạo đói tương sinh viên từ class sinhVien
+        // cú pháp: tên class tên đối tương = new teenClass ( giá trị thuộc tính );
+        sinhVien sv1 = new sinhVien("Bray",20,8.5,7.0,9.0);
+        sinhVien sv2 = new sinhVien("Trần Thị B", 19, 6.0, 5.5, 7.0);
+
+        //truy cập vào các thuộc tính và phương thức của đối tượng
+        double dtb1 = sv1.tinhDiemTrungBinh();
+        System.out.println("Điểm trung bình của " + sv1.ten + " là: " + dtb1);
+        sv1.xepLoai();
+        //System.out.println("Số tuổi của " + sv1.ten + " là: " + sv1.tuoi);
+        // lỗi vì thuộc tính tuổi là private, không thể truy cập trực tiếp từ bên ngoài class
     }
 }
 class sinhVien {
